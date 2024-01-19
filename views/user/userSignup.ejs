@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Signup | CoderGirl</title>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="/userCss/userSignup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+        <header>Signup</header>
+        <% if (locals.message) { %>
+          <p style="color: red; margin-left: 110px; margin-bottom: 10px;"><%= message %></p>
+      <% } %>
+        <form action="" method="post" id="signupForm" onsubmit="return validateForm()">
+            <input type="text" name="firstname" id="firstname" placeholder="Enter your Firstname" required>
+            <div id="firstnameError" class="error-message"></div>
+
+            <input type="text" name="lastname" id="lastname" placeholder="Enter your Lastname" required>
+            <div id="lastnameError" class="error-message"></div>
+
+            <input type="tel" name="mno" id="mno" placeholder="Enter your Mobile" required>
+            <div id="mnoError" class="error-message"></div>
+
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <div id="emailError" class="error-message"></div>
+
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <div id="passwordError" class="error-message"></div>
+
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <div id="confirmPasswordError" class="error-message"></div>
+            
+            <p id="passwordMatchError" class="error-message">Passwords do not match.</p>
+
+            <input type="submit" class="button" value="Signup">
+        </form>
+        <div class="signup">
+            <span class="signup">Already have an account?
+             <a href="/login">Login</a>
+            </span> 
+        </div>
+    </div>
+</div>
+
+<script src=" /scripts/userSignup.js"></script>
+
+</body>
+</html>

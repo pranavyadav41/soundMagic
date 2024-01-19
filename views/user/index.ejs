@@ -1,0 +1,460 @@
+<%- include('../layouts/header.ejs') %>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header" >
+        <!-- <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="header__top__left">
+                            <p>Free shipping, 30-day return or refund guarantee.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="header__top__right">
+                            <div class="header__top__links">
+                                <a href="#">Sign in</a>
+                                <a href="#">FAQs</a>
+                            </div>
+                            <div class="header__top__hover">
+                                <span>Usd <i class="arrow_carrot-down"></i></span>
+                                <ul>
+                                    <li>USD</li>
+                                    <li>EUR</li>
+                                    <li>USD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo p-0 mt-4">
+                        <a href="/home"><img src="/assets/images/logos/download.png" width="180" alt="" /></a>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="/wishlist"><img src="img/icon/heart.png" alt=""></a>
+                        <% if(cart==null){ %>
+                            <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span></span></a>
+                            <% }else{ %>
+                                <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span><%= cart.items.length %></span></a>
+    
+                                <% } %>
+                        <a href="/user-profile"><img src="img/icon/user.png" alt=""></a>
+                        
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <% if (banners.length==0){ %>
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-7 col-md-8">
+                            <div class="hero__text">
+                                <h2>Immerse Yourself in Sonic Bliss</h2>
+                                <p style="color:black;">Indulge Your Senses: Unleash the Power of Crystal-Clear Sound with Our Exceptional Headphone Collection. Elevate Your Audio Experience Today!</p>
+                                <a href="/shop" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__items set-bg" data-setbg="img/hero/hero-2.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-7 col-md-8">
+                            <div class="hero__text">
+                                <h2>11.1.4 Channel soundbar
+                                    with Dolby Atmos</h2>
+                                <p style="color: black;">Unleash Cinematic Brilliance: Elevate your home audio with our premium soundbars. Immerse yourself in crystal-clear sound, bringing movies, music, and gaming to life. Experience audio excellence at its finest. Discover our soundbars collection today!</p>
+                                <a href="/shop" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <% }else{ %>
+
+        <section class="hero">
+            <div class="hero__slider owl-carousel">
+                <% banners.forEach((banner)=>{ %>
+               
+                <div class="" style="background-image: url('/productImages/<%= banner.image[0] %>'); width:1519.2px;height:800px;">
+                   
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-7 col-md-8">
+                                <div class="hero__text" style="margin-top: 200px;">
+                                    <h2><%= banner.title %></h2>
+                                    <p style="color:black;"><%= banner.description %></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+                <% }) %>
+               
+            </div>
+        </section>
+
+
+        <% } %>
+    <!-- Hero Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-4">
+                    <div class="banner__item">
+                        <div class="banner__item__pic">
+                            <img src="img/banner/banner-1.jpg" alt="">
+                        </div>
+                        <div class="banner__item__text">
+                            <h2>Headphones</h2>
+                            <a href="/shop">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="banner__item banner__item--middle">
+                        <div class="banner__item__pic">
+                            <img src="img/banner/banner-2.jpg" alt="">
+                        </div>
+                        <div class="banner__item__text">
+                            <h2>Soundbars</h2>
+                            <a href="/shop">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="banner__item banner__item--last">
+                        <div class="banner__item__pic">
+                            <img src="img/banner/banner-3.jpg" alt="">
+                        </div>
+                        <div class="banner__item__text">
+                            <h2>Speakers</h2>
+                            <a href="/shop">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="filter__controls">
+                        <li class="active" data-filter="*">Best Sellers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row product__filter">
+                <% for(var i=0; i<Math.min(4, products.length); i++){ %>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="/productImages/<%= products[i].image[0] %>">
+                            <ul class="product__hover">
+                                <li><a href="" onclick="addToWish('<%= products[i]._id %>')"><img src="img/icon/heart.png" alt=""></a></li>
+                            </ul>
+                            <% if(products[i].productOffer.offerApplied==true){ %>
+                                <span class="label" style="background-color: black; color:white;"><%= products[i].productOffer.offerPercentage %>% OFF</span>  
+
+                                    <% }
+                                     if(products[i].categoryOffer.offerApplied==true){ %>
+
+                                        <span class="label" style="background-color: black; color:white;"><%= products[i].categoryOffer.offerPercentage %>% OFF</span>
+
+
+                                        <% }
+                                         if(products[i].productOffer.offerApplied==true && products[i].categoryOffer.offerApplied==true ){ %>
+
+                                            <span class="label" style="background-color: black; color:white;"><%= products[i].productOffer.offerPercentage+products[i].categoryOffer.offerPercentage %>% OFF</span>
+
+                                            <% } %>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><%= products[i].productName %></h6>
+                            <a href="" onclick="addToCart('<%= products[i]._id %>')" class="add-cart">+ Add To Cart</a>
+                            <% if(products[i].productOffer.offerApplied==true||products[i].categoryOffer.offerApplied==true){ %>
+                                <h5><span style="font-weight: lighter;"><strike>₹ <%= products[i].offerPrice %></strike></span> ₹ <%= products[i].totalOfferPrice %></h5>
+
+                                <% }else{ %>
+                            <h5>&#8377;<%= products[i].offerPrice %></h5>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+              
+           
+           
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+   
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="/assets/images/logos/download.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>SHOP NOw</h6>
+                        <ul>
+                            <li><a href="#">Speakers</a></li>
+                            <li><a href="#">Soundbars</a></li>
+                            <li><a href="#">wired headphones</a></li>
+                            <li><a href="#">Wireless headphones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>CONTACT US</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script>
+
+        function addToCart(productId) {
+            event.preventDefault();
+            fetch('/addToCart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId: productId })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    response.json().then(data=>{
+                        if(data.error==='Product already added to cart'){
+                    Swal.fire({
+                  icon: 'info',
+                  title: 'Item Already in Cart',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                    
+                }else if(data.error==="Product is out of stock"){
+                    Swal.fire({
+                  icon: 'error',
+                  title: 'The product is out of stock',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+        
+                }
+            })
+                   
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                  icon: 'success',
+                  title: 'Product added to cart',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                    
+        
+                    // Optionally, update your UI or trigger additional actions
+                }else{
+                   
+                    console.error("Failed to add to cart:", data.message);
+                    // Handle the error, show a message, or perform other actions
+        
+                }
+            })
+            .catch(error => {
+                console.error("Error during addToCart:", error.message);
+                // Log the error or handle it appropriately
+            });
+        }
+        
+        function addToWish(productId) {
+            event.preventDefault();
+            fetch('/addToWish', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId: productId })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    response.json().then(data=>{
+                        if(data.error==='Product already added to wishlist'){
+                    Swal.fire({
+                  icon: 'info',
+                  title: 'Item Already in wishlist',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                    
+                }else if(data.error==="Product is out of stock"){
+                    Swal.fire({
+                  icon: 'error',
+                  title: 'The product is out of stock',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+        
+                }
+            })
+                   
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                  icon: 'success',
+                  title: 'Product added to wishlist',
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                    
+        
+                    // Optionally, update your UI or trigger additional actions
+                }else{
+                   
+                    console.error("Failed to add to wishlist:", data.message);
+                    // Handle the error, show a message, or perform other actions
+        
+                }
+            })
+            .catch(error => {
+                console.error("Error during addToWish:", error.message);
+                // Log the error or handle it appropriately
+            });
+        }
+        </script>
+
+    <%- include('../layouts/footer.ejs') %>

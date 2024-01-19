@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <!-- linking css file -->
+    <link rel="stylesheet" href="/userCss/verifyOtp.css">
+</head>
+<body>
+    <div class="container">
+        <% if (locals.message) { %>
+            <p style="color: red;"><%= message %></p>
+        <% } %>
+        <% if (locals.success) { %>
+            <p style="color: green;"><%= success %></p>
+        <% } %>
+
+        <h2>OTP Verification</h2>
+        <p>Enter the 6-digit OTP sent to your email.</p>
+        <form action="/verify" method="post">
+            <div class="otp-input">
+                <input type="text" name="digit1" maxlength="1" required autofocus>
+                <input type="text" name="digit2" maxlength="1" required>
+                <input type="text" name="digit3" maxlength="1" required>
+                <input type="text" name="digit4" maxlength="1" required>
+                <input type="text" name="digit5" maxlength="1" required>
+                <input type="text" name="digit6" maxlength="1" required>
+            </div>
+            <button type="submit">Verify</button>
+        </form><br>
+        <div id="timer-container">
+            <p id="a"><b> Did'nt got the otp? Resend in </b><span id="timer"><b>60</b></span> <b>seconds</b></p>
+            <button  id="resendButton" style="display:none; margin-left: 80px; margin-bottom: 30px; background-color: transparent; color:green; font-size: small;" onclick="resendOTP()"><u><b>Resend OTP</b></u></button>
+        </div>
+    </div>
+    <script>
+        var timer =60; // Initial timer value in seconds
+        var countdown = setInterval(function() {
+            timer--;
+            document.getElementById('timer').textContent = timer;
+            if (timer <= 0) {
+                clearInterval(countdown);
+                document.getElementById('resendButton').style.display = 'block';
+                document.getElementById('timer').style.display = 'none';
+                document.getElementById('a').style.display = 'none';
+            }
+        }, 1000);
+
+        function resendOTP(){
+            
+            fetch('/resendOTP',{
+                method:"GET",
+                headers:{
+                    'Content-Type':'application/json'
+                }
+
+            })
+        }
+    </script>
+</body>
+</html>

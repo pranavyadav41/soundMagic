@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login | CoderGirl</title>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="/userCss/userLogin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <header>Admin Login</header>
+      <% if (locals.error) { %>
+        <p style="color: red; margin-left: 80px; margin-bottom: 10px;"><%= error %></p>
+    <% } %>
+      <form action="" method="post">
+        <input type="text" placeholder="Enter your email" name="email" required>
+        <input type="password" placeholder="Enter your password" name="password" required>
+  
+        <a href="#">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
+      </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css" />
+  <link rel="stylesheet" href="/adminCss/categories.css" />
+  <script src="path/to/jquery/jquery.min.js"></script>
+<script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+<script src="path/to/popper/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    th, td {
+        border: 0.5px solid #ddd;
+        padding: 14px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #424d5a;
+        color: white;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .status-dropdown {
+        width: 150px;
+    }
+</style>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index.html" class="text-nowrap logo-img">
+            <img src="/assets/images/logos/download.png" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+             <!-- Sidebar navigation-->
+             <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+              <ul id="sidebarnav">
+                <li class="nav-small-cap">
+                  <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                  <span class="hide-menu">Home</span>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-layout-dashboard"></i>
+                    </span>
+                    <span class="hide-menu">Dashboard</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/users" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-article"></i>
+                    </span>
+                    <span class="hide-menu">Customers</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/categories" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-alert-circle"></i>
+                    </span>
+                    <span class="hide-menu">Categories</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/products" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-cards"></i>
+                    </span>
+                    <span class="hide-menu">Products</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/orders" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-file-description"></i>
+                    </span>
+                    <span class="hide-menu">Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/returnOrders" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-file-description"></i>
+                    </span>
+                    <span class="hide-menu">Returned Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/coupons" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-typography"></i>
+                    </span>
+                    <span class="hide-menu">Coupons</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/offers" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-typography"></i>
+                    </span>
+                    <span class="hide-menu">Offers</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/banner" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-login"></i>
+                    </span>
+                    <span class="hide-menu">Banners</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/admin/logout" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-login"></i>
+                    </span>
+                    <span class="hide-menu">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <header> HELLO</header>
+      <div class="container">
+        <!-- Order Details Section -->
+        <div class="section">
+            <h2>Order Details</h2>
+            <p><strong>Date:</strong><%= orders.OrderDate.toLocaleDateString() %></p>
+            <p><strong>Order ID:</strong><%= orders.orderId %></p>
+            <p><strong>Payment Method:</strong><%= orders.paymentMethod %></p>
+        </div>
+    
+        <!-- Delivery Address Section -->
+        <div class="section">
+            <h2>Delivery Address</h2>
+            <p><strong>Name:</strong><%= orders.shippingAddress.fullname %></p>
+            <p><strong>Mobile:</strong><%= orders.shippingAddress.mobile %></p>
+            <p><strong>Address:</strong><%= orders.shippingAddress.address %></p>
+            <p><strong>City:</strong><%= orders.shippingAddress.city %></p>
+            <p><strong>State:</strong><%= orders.shippingAddress.state %></p>
+            <p><strong>Pincode:</strong><%= orders.shippingAddress.pincode %></p>
+        </div>
+    
+        <!-- Product List Section -->
+        <div class="section">
+            <h2>Product List</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th> 
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <% orders.products.forEach((product,index)=>{%>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><img src="/productImages/<%= product.productId.image[0] %>" style="width:70px;height:70px;"></img></td>
+                    <td><%= product.productId.productName %></td>
+                    <td><%= product.quantity %></td>
+                    <% if (orders.discountedPrice != 0){%>
+                      <% if(product.productId.productOffer.offerApplied==true || product.productId.categoryOffer.offerApplied==true){ %>
+                          <td>&#8377;<%= (product.productId.totalOfferPrice*product.quantity - totalDiscountPerProduct).toFixed() %></td>
+          
+                          <% }else{ %>
+                    <td>&#8377;<%= (product.productId.offerPrice*product.quantity - totalDiscountPerProduct).toFixed() %></td>
+                    <% } %>
+          
+                    <% }else{ %>
+                      <td>&#8377;<%= (product.productId.offerPrice*product.quantity - totalDiscountPerProduct).toFixed() %></td>
+          
+                      <% } %>
+                    <% if(product.productOrderStatus=='Cancelled'){ %>
+
+                      <td style="color:red;">Cancelled</td>
+
+
+                      <% }else if(product.productOrderStatus=='Returned'){ %>
+
+                        <td style="color:red;">Returned</td>
+
+
+                        <%}else{%>
+                    <td>
+                        <select class="status-dropdown" id="orderStatus<%= index %>" data-product-id="<%= product.productId._id %>" data-order-id="<%= orders._id %>">
+                            <option value="order-placed">Order Placed</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                        </select>
+                    </td>
+                    <% } %>
+                </tr>
+                <!-- Add more rows as needed -->
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        "<% orders.products.forEach((product, index) => { %>"
+        
+        document.getElementById('orderStatus<%= index %>').addEventListener('change',function(){
+          var newValue = this.value;
+          var productId = this.getAttribute('data-product-id')
+          var orderId = this.getAttribute('data-order-id')
+          
+        fetch('/admin/orderStatus',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({newValue,productId,orderId})
+
+        })
+
+
+
+        })
+        
+        "<% }) %>"
+
+
+
+
+
+       });
+    </script>
+        <script src="path/to/jquery/jquery.min.js"></script>
+<script src="path/to/popper/popper.min.js"></script>
+<script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+  
+  <script src="path/to/jquery/jquery.min.js"></script>
+  <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+  <script src="path/to/popper/popper.min.js"></script>
+  <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="/adminScript/categories.js"></script>
+  <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/sidebarmenu.js"></script>
+  <script src="/assets/js/app.min.js"></script>
+  <script src="/assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>

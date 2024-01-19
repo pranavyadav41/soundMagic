@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <style>
+        .coupon-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .coupon {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .coupon strong {
+            color: #333;
+        }
+        .card {
+          margin: 20px;
+        }
+        .address-section {
+          background-color: rgb(243, 242, 238);
+          padding: 10px;
+          margin-top: 10px;
+        }
+        /* //////////////RADIO BUTTON//////////////////// */
+    .custom-radio {
+    width: 15px; /* Set the width and height */
+    height: 15px;
+    border-radius: 50%; /* Make it round */
+    border: 2px solid #000000; /* Border color */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-right:0px; /* Optional: Add some spacing */
+  }
+
+  /* Optional: Style the checked state */
+  .custom-radio:checked {
+    background-color: #0078c8; /* Change background color when checked */
+    border-color: #0e0e0e; /* Change border color when checked */
+  }
+  .cart-count {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cart-count span {
+        background-color: #abb56a; /* Set your desired background color */
+        color: #ffffff; /* Set your desired text color */
+        border-radius: 50%;
+        padding:5px 5px;
+        font-size: 14px; /* Set your default font size */
+        position: absolute;
+        top: -6px; /* Adjust vertical position */
+        right: -12px; /* Adjust horizontal position */
+        min-width: 20px; /* Set a minimum width */
+        text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo p-0 mt-4">
+                        <a href="./index.html"><img src="../assets/images/logos/download.png" width="180" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li class="active"><a href="/shop">Shop</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <a href="/wishlist"><img src="img/icon/heart.png" alt=""></a>
+                        <a href="/cart"><img src="img/icon/cart.png" alt=""></a>
+                        <a href="/user-profile"><img src="img/icon/user.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>Check Out</h4>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Home</a>
+                            <a href="./shop.html">Shop</a>
+                            <span>Check Out</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+            <div class="checkout__form">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <h6 class="ml-2 p-3 "><b>SELECT SHIPPING ADDRESS</b></h6>
+                            <div class="card-body pb-2 ">
+                                <% if(address.length==0){ %>
+                                    <p style="background-color: azure;"><b>Address not found !</b></p>
+
+                                    <% }else{ %>
+                          <% address.forEach((address)=>{ %>
+                            <div>
+                                <input class="form-check-input mt-3 custom-radio" type="radio" data-address-id="<%=address._id%>" name="addressRadio" id="radio" value="" aria-label="...">
+                              </div>
+                                <div class="address-section">
+                                <div class="name and address d-flex">
+                                  <p><%= address.fullname %> <span> , </span></p>
+                                  <p><%= address.mobile %> </p>
+                                </div>
+                                <p><%= address.address %> </p>
+                                <div class="city and state and pincode d-flex">
+                                  <p><%= address.city %> <span> , </span></p>
+                                  <p><%= address.State %><span> , </span></p>
+                                  <p><%= address.pincode %></p>
+                                </div>
+                                <button type="button" class="btn btn-success btn-sm">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" data-address-id="<%= address._id %>" onclick="deleteAddress()">Delete</button>
+                                </div>
+                               
+                                <% }); %>
+                                <% } %>
+                                </div>
+                                <!-- ////ADD ADDRESS//////////////////////////////////////////// -->
+                                <h6 class="mt-3 ml-3"><b>ADD ADDRESS</b></h6>
+                                <div class="card-body pb-2">
+                                <div action="" method="POST">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Name</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your name" id="fullname" name="fullname" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Mobile</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your mobile number" id="mob" name="mob" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Address(Area and Street)</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your address" id="address" name="housename" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>City/District/Town</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your city" id="city" name="city" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>State</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your state" id="state" name="state" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Pincode</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your Pincode" id="pincode" name="pincode" required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-sm" onclick="addAddress()">Add adress+</button>&nbsp;
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="checkout__order">
+                                <h4 class="order__title">Your order</h4>
+                                <div class="checkout__order__products"><b>Product</b><span><b>Total</b></span></div>
+                                <ul class="checkout__total__products">
+                                    <% cart[0].items.forEach(product =>{ %>
+                                        <% if(product.productId.productOffer.offerApplied==true || product.productId.categoryOffer.offerApplied==true){ %>
+
+                                            <li><%= product.productId.productName %><span>&#8377; <%= product.productId.totalOfferPrice*product.quantity %></span></li>
+
+                                            <% }else{ %>
+                                    <li><%= product.productId.productName %><span>&#8377; <%= product.productId.offerPrice*product.quantity %></span></li>
+                                    <% } %>
+                                    <% }); %>
+                                    <div class="checkout__input__checkbox">
+                                        <label for="coupon">
+                                            Apply coupons
+                                            <input type="checkbox" id="coupon">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </ul>
+                                <ul class="checkout__total__all">
+                                    <li id="subTotal">Subtotal <span>&#8377; <%= subtotal %></span></li>
+                                <div id="couponResult" style="display:none;">
+                                    <li><strong>Discount Price</strong><span id="amountDecreased">0</span></li>
+                                    <li><strong>Total Price</strong><span id="newSubtotal">0</span></li>
+                                </div>
+
+                                    
+
+                                </ul>
+                                <p><b>Select your payment method</b></p>
+                                <div class="checkout__input__checkbox">
+                                    <label for="payment">
+                                        Cash on delivery
+                                        <input type="checkbox" id="payment">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout__input__checkbox">
+                                    <label for="payment1">
+                                        Pay Online
+                                        <input type="checkbox" id="payment1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <% if(wallet[0] && wallet[0].balance>=subtotal){ %>
+                               
+                                <div class="checkout__input__checkbox">
+                                    <label for="wallet">
+                                        Use Wallet money     <span style="color: green;">Balance: &#8377;<%= wallet[0].balance %></span>
+                                        <input type="checkbox" id="wallet">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <% } %>
+                               
+                                <button type="" class="site-btn" onclick="placeOrder('<%= subtotal %>')">PLACE ORDER</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section End -->
+
+     <!-- Footer Section Begin -->
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="/assets/images/logos/download.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>SHOP NOw</h6>
+                        <ul>
+                            <li><a href="#">Speakers</a></li>
+                            <li><a href="#">Soundbars</a></li>
+                            <li><a href="#">wired headphones</a></li>
+                            <li><a href="#">Wireless headphones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>CONTACT US</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+    <script>
+    function addAddress(){
+        event.preventDefault();
+
+const address ={
+ Fullname:document.getElementById('fullname').value.trim(),
+ Mobile:document.getElementById('mob').value.trim(),
+ Address:document.getElementById('address').value.trim(),
+ city:document.getElementById('city').value.trim(),
+ state:document.getElementById('state').value.trim(),
+ Pincode:document.getElementById('pincode').value.trim()
+}
+
+ if(address.Fullname===''|| address.Mobile===''|| address.Address===''||address.city===''||address.state===''||address.Pincode===''){
+     alert("Please fill in all fields")
+     return false;
+ }
+ const nameRegex = /^[A-Za-z ]+$/;
+ const mobileRegex = /^[0-9]{10}$/;
+ const cityRegex = /^[A-Za-z ]+$/;
+ const stateRegex = /^[A-Za-z ]+$/;
+ const pincodeRegex = /^[0-9]{6}$/;
+
+ if(!address.Fullname.match(nameRegex)){
+     alert("Name Should only contain letters")
+     return false;
+ } 
+ if(!address.Mobile.match(mobileRegex)){
+     alert("Mobile number should contain 10 digits")
+     return false;
+ } 
+ if(!address.city.match(cityRegex)){
+     alert("Enter a valid city")
+     return false;
+ } 
+ if(!address.state.match(stateRegex)){
+     alert("Enter a valid city")
+     return false;
+ } 
+ if(!address.Pincode.match(pincodeRegex)){
+     alert("Pincode should contain 6 digits")
+     return false;
+
+
+
+}
+fetch('/addAddress',{
+ method:'POST',
+ headers:{'Content-Type':'application/json'},
+ body:JSON.stringify(address)
+
+})
+.then(response => response.json()) // Assuming the response is in JSON format
+.then(data => {
+if(data.success){
+    location.reload()
+}
+})
+.catch(error => {
+ // Handle errors
+ console.error('Error:', error);
+});
+
+}
+
+
+////////////////////////COUPON////////////////////////////////
+// Function to apply a coupon
+function applyCoupon(code, discountAmount) {
+        // Assume you have a subtotal element with an id of "subtotal"
+        const subtotalElement = document.getElementById('subTotal');
+        // Assume you have an element to display the amount decreased with an id of "amountDecreased"
+        const amountDecreasedElement = document.getElementById('amountDecreased');
+        // Assume you have an element to display the new subtotal with an id of "newSubtotal"
+        const newSubtotalElement = document.getElementById('newSubtotal');
+        // Assume you have an element to display the coupon result with an id of "couponResult"
+        const couponResultElement = document.getElementById('couponResult');
+        
+        // Parse the discount amount as a number (assuming it's a number with currency symbol)
+        const discount = parseFloat(discountAmount.replace(/[^0-9.-]+/g,"")); // Remove non-numeric characters
+
+        // Subtract the discount from the subtotal
+        const newSubtotal = parseFloat(subtotalElement.textContent.replace(/[^0-9.-]+/g,"")) - discount;
+
+      
+
+        // Update the amount decreased element with the discount amount
+        amountDecreasedElement.textContent ="₹"+ discount;
+
+        // Update the new subtotal element with the new subtotal value
+        newSubtotalElement.textContent = "₹"+newSubtotal;
+
+
+        // Display the coupon result
+        couponResultElement.style.display = 'block';
+
+        // You can add additional logic here, such as updating the UI or making an AJAX request to update the server-side subtotal.
+    }
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the checkbox element
+    const couponCheckbox = document.getElementById('coupon');
+     
+
+    // Add an event listener to the checkbox
+    couponCheckbox.addEventListener('change', function () {
+        // Check if the checkbox is checked
+        if (couponCheckbox.checked) {
+
+            const html = `
+            <% coupons.forEach((coupon)=>{ %>
+                <% if(new Date(coupon.expiry) >= new Date()){ %>
+                <% if (coupon.minimumCartValue <= subtotal && coupon.listed==1) { %>
+                    <div class="coupon">
+                        <p><strong>Coupon Code:</strong><%= coupon.code %></p>
+                        <p><strong>Offer Price: </strong> &#8377;<%= coupon.discountAmount %></p>
+                        <button class="btn btn-dark btn-sm" onclick="applyCoupon('<%= coupon.code %>', '<%= coupon.discountAmount %>')">APPLY</button>
+                    </div>
+                    <% }else{ %>
+
+                    <div class="coupon">
+                        <p><strong>Coupon Code:</strong><%= coupon.code %></p>
+                        <p><strong>Offer Price: </strong> &#8377;<%= coupon.discountAmount %></p>
+                        <p style="color:red">Add &#8377;<%= coupon.minimumCartValue - subtotal %> more to avail this offer</p>
+                       
+                       
+                    </div>
+
+
+                        <% } %>
+                        <% } %>
+                   <% }); %>
+                   `
+            // Show a SweetAlert when the checkbox is checked
+            Swal.fire({
+  html:html,
+  showCloseButton: true,
+  showConfirmButton: false
+
+});
+        }
+    });
+});
+
+
+///////////////////////////////////DELETE ADDRESS///////////////////////////////////////////////////
+
+function deleteAddress(){
+    const addressId = event.target.getAttribute('data-address-id')
+    fetch('/deleteAddress',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({addressId:addressId})
+     })
+     .then(response=>response.json())
+     .then(data=>{
+        if(data.success){
+            location.reload();
+        }
+     })
+}
+///////////////PLACING ORDER//////////////////////////////////
+function placeOrder(subtotal){
+    const selectedRadio = document.querySelector('input[name="addressRadio"]:checked')
+    const codCheckBox = document.getElementById('payment')
+    const onlineCheckbox = document.getElementById('payment1')
+    const walletCheckbox =document.getElementById('wallet')
+    const newSubtotalElement = document.getElementById('newSubtotal');
+    const couponCheckbox = document.getElementById("coupon") 
+    let newSubtotalValue = parseFloat(newSubtotalElement.textContent.replace(/[^0-9.-]+/g, ""));
+   
+     
+    let addressId =null;
+    if(selectedRadio){
+         addressId = selectedRadio.dataset.addressId;
+        }else{
+            alert("please select the shipping address")
+            return false;
+        }
+
+          // Check if more than one payment method is selected
+   
+
+
+    
+
+
+        let paymentMethod =null;
+        if(codCheckBox.checked){
+             paymentMethod ="Cash on delivery";
+        }else if(onlineCheckbox.checked){
+            paymentMethod = "Online payment"
+
+
+        }else if(walletCheckbox.checked){
+
+            paymentMethod = "Paid through wallet"
+        
+        }else{
+            alert("Please select the payment method")
+            return false;
+        }
+
+
+        
+
+        
+
+        if(paymentMethod=="Cash on delivery"){
+
+            if(newSubtotalValue>0){
+                fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,newSubtotalValue,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+
+
+            window.location.href='/successOrder';
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+
+
+
+
+            }else{
+
+
+        fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+
+
+            window.location.href='/successOrder';
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+            }
+
+}else if(paymentMethod=="Online payment"){
+    if(newSubtotalValue>0){
+
+        console.log("hiiii");
+
+
+    fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,newSubtotalValue,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok'); 
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+        const order = data.order;
+        const discount = data.discountPrice;
+        const user = data.user;
+        const address=data.addressId
+        const amount = order.amount;
+        
+        var options = {
+    "key": "rzp_test_bvgGGt1MaFReGt", // Enter the Key ID generated from the Dashboard
+    "amount": amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "SOUND MAGIC",
+    "description": "Test Transaction",
+    "image": "/assets/images/logos/download.png",
+    "order_id":order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        verifyPayment(response,order)
+    },
+    "prefill": {
+        "name": user[0].firstname,
+        "email": user[0].email,
+        "contact":user[0].mobile
+    },
+    "notes": {
+        "address": address,
+        "discount":discount,
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+rzp1.open();
+async function verifyPayment(payment,order){
+   fetch('/paymentVerify',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({payment,order,options})
+   }) .then(response=>response.json())
+    .then(data=>{
+        if(data.success){
+
+             window.location.href='/successOrder';
+            
+        }
+    })
+}
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+
+}else{
+    console.log("hello");
+    fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+        const order = data.order;
+        const user = data.user;
+        const address=data.addressId
+        const amount = order.amount*100;
+        var options = {
+    "key": "rzp_test_bvgGGt1MaFReGt", // Enter the Key ID generated from the Dashboard
+    "amount": amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "SOUND MAGIC",
+    "description": "Test Transaction",
+    "image": "/assets/images/logos/download.png",
+    "order_id":order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        verifyPayment(response,order)
+    },
+    "prefill": {
+        "name": user[0].firstname,
+        "email": user[0].email,
+        "contact":user[0].mobile
+    },
+    "notes": {
+        "address": address,
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+rzp1.open();
+async function verifyPayment(payment,order){
+   fetch('/paymentVerify',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({payment,order,options})
+   }) .then(response=>response.json())
+    .then(data=>{
+        if(data.success){
+
+            
+            window.location.href='/successOrder';
+            
+        }
+    })
+}
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+    
+
+}
+
+
+
+}else if(paymentMethod=="Paid through wallet"){
+
+
+    if(newSubtotalValue>0){
+                fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,newSubtotalValue,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+
+
+            window.location.href='/successOrder';
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+
+
+
+
+            }else{
+
+
+        fetch('/placeOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({addressId,subtotal,paymentMethod})
+        })
+        .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+       }
+        return response.json();
+    })
+    .then(data=>{
+       if(data.success){
+
+
+            window.location.href='/successOrder';
+            
+        }else{
+            console.log("order failed");
+
+        }
+    })
+    .catch(error => console.error('Error:', error));
+            }
+
+
+
+
+}
+}
+
+
+
+
+
+
+
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

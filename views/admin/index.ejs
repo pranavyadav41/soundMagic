@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoundMagic</title>
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/styles.min.css" />
+ 
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    
+
+    .sales-report-section {
+      margin-top: 50px;
+      background-color: #fff;
+      width: 1100px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .generate-btn {
+      background-color: #000000;
+      color: #fff;
+      border: none;
+      padding: 12px 12px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .generate-btn:hover {
+      background-color: #3c903d;
+    }
+
+    table {
+      margin-top: 30px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 12px;
+    }
+
+    thead {
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index.html" class="text-nowrap logo-img">
+            <img src="/assets/images/logos/download.png" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/dashboard" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/users" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Customers</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/categories" aria-expanded="false">
+                <span>
+                  <i class="ti ti-alert-circle"></i>
+                </span>
+                <span class="hide-menu">Categories</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/products" aria-expanded="false">
+                <span>
+                  <i class="ti ti-cards"></i>
+                </span>
+                <span class="hide-menu">Products</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/orders" aria-expanded="false">
+                <span>
+                  <i class="ti ti-file-description"></i>
+                </span>
+                <span class="hide-menu">Orders</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/returnOrders" aria-expanded="false">
+                <span>
+                  <i class="ti ti-file-description"></i>
+                </span>
+                <span class="hide-menu">Returned Orders</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/coupons" aria-expanded="false">
+                <span>
+                  <i class="ti ti-typography"></i>
+                </span>
+                <span class="hide-menu">Coupons</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/offers" aria-expanded="false">
+                <span>
+                  <i class="ti ti-typography"></i>
+                </span>
+                <span class="hide-menu">Offers</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/banner" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Banners</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="/admin/logout" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <!--  Row 1 -->
+        <div class="row">
+          <div class="col-lg-8 d-flex align-items-strech">
+            <div class="card w-100">
+              <div class="card-body">
+                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                  <div class="mb-3 mb-sm-0">
+                    <h5 class="card-title fw-semibold">Sales Overview</h5>
+                  </div>
+                  <div>
+                   <button class="btn btn-outline-success" onclick="fetchAndRender('monthly')">Monthly</button>
+                   <button class="btn btn-outline-success" onclick="fetchAndRender('yearly')">Yearly</button>
+                  </div>
+                </div>
+                <canvas id="salesChart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- Yearly Breakup -->
+            
+              </div>
+              <div class="col-lg-12">
+                <!-- Monthly Earnings -->
+                <div class="card">
+              
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="sales-report-section">
+                <h2 class="text-center mb-4">Sales Report</h2>
+        
+                <!-- Date Range Selection -->
+                <div class="form-row mb-4">
+                  <div class="form-group col-md-4">
+                    <label for="startDate">From Date</label>
+                    <input type="date" class="form-control" id="startDate" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="endDate">To Date</label>
+                    <input type="date" class="form-control" id="endDate" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <button class="btn generate-btn btn-block mt-4" onclick="generateReport()">Generate Report</button>
+                  </div>
+                </div>
+        
+                <!-- Transactions Table -->
+                <table class="table table-bordered table-striped"  id="reportTable" style="display:none">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Order ID</th>
+                      <th>Name</th>
+                      <th>Order Date</th>
+                      <th>Product Name</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                      <th>Payment Method</th>
+                    </tr>
+                  </thead>
+                  <tbody id="reportTableBody">
+                    <!-- Table rows will be dynamically added here -->
+                  </tbody>
+                </table>
+                <div id="downloadButtons" style="display:none;">
+                  <button id="downloadPdf" onclick="downloadReport('pdf')" class="btn btn-outline-info">Download PDF</button>
+                  <button id="downloadCsv" onclick="downloadReport('csv')" class="btn btn-outline-info">Download CSV</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+      
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+  <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script>
+
+    async function generateReport(){
+      var startDate = document.getElementById('startDate').value;
+      var endDate = document.getElementById('endDate').value
+
+      fetch('/admin/dashboard',{
+        method:'post',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({startDate,endDate})
+      })
+      .then(response => {
+    // Handle the response
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+   return response.json(); // or response.text(), response.blob(), etc.
+  })
+  .then(data => {
+    // Handle the data
+    console.log(data);
+    const orders = data.orders;
+
+// Clear existing table rows
+const tableBody = document.getElementById('reportTableBody');
+tableBody.innerHTML = '';
+
+// Update table with fetched orders
+orders.forEach((order, index) => {
+  const row = tableBody.insertRow();
+  row.innerHTML = `
+    <td>${index + 1}</td>
+    <td>${order._id}</td>
+    <td>${order.shippingAddress.fullname}</td>
+    <td>${new Date(order.OrderDate).toLocaleDateString()}</td>
+    <td>${order.products.map(product => product.productId.productName).join(', ')}</td>
+    <td>${order.products.map(product => product.quantity).join(', ')}</td>
+    <td>${order.totalAmount}</td>
+    <td>${order.paymentMethod}</td>
+  `;
+});
+      document.getElementById('reportTable').style.display = 'table';
+      document.getElementById('downloadButtons').style.display = 'block';
+  })
+  .catch(error => {
+    // Handle errors
+    console.error('Fetch error:', error);
+  });
+    }
+
+
+  </script>
+
+  <script>
+   async function downloadReport(type) {
+  try {
+    const response = await fetch(`/admin/download-${type}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const blob = await response.blob();
+    const fileName = `sales_report.${type}`;
+
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(new Blob([blob]));
+    link.download = fileName;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    console.log(`${fileName} downloaded successfully.`);
+  } catch (error) {
+    console.error('Download error:', error);
+  }
+}
+
+  </script>
+  <script>
+    function fetchAndRender(option){
+      fetch(`/admin/dashboard/${option}`,{
+
+        method:"POST",
+        headers:{'Content-Type':'application/json'},
+
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Update the chart with the fetched data
+          console.log("recieved data",data);
+          updateChart(data);
+
+        })
+        .catch((error) => console.error(`Error fetching ${option} orders:`, error));
+}
+
+function updateChart(data) {
+    let labels, salesData;
+
+    if (data && Array.isArray(data.data) && data.data.length > 0) {
+        // If 'data' is present and it's an array (monthly or yearly data)
+        labels = data.data.map(item => item._id || item);
+        salesData = data.data.map(item => item.totalSales || item);
+    } else {
+        console.error('Invalid data format:', data);
+        // Handle the case when the data format is not as expected
+        return;
+    }
+
+    console.log('Labels:', labels);
+    console.log('Sales Data:', salesData);
+
+    salesChart.data.labels = labels;
+    salesChart.data.datasets[0].data = salesData;
+    salesChart.update();
+}
+
+  // Initialize an empty chart
+  const ctx = document.getElementById('salesChart').getContext('2d');
+const salesChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [], // Month names or years will go here
+        datasets: [{
+            label: 'Total sales',
+            data: [],
+            borderColor: 'rgb(75, 192, 192)',
+            borderWidth: 2,
+            fill: false
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+  </script>
+
+</body>
+
+</html>

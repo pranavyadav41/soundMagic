@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login | CoderGirl</title>
+  <!-- linking css file -->
+  <link rel="stylesheet" href="/userCss/userLogin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <header>Login</header>
+      <% if (locals.error) { %>
+        <p style="color: red; margin-left: 80px; margin-bottom: 10px;"><%= error %></p>
+    <% } %>
+    <% if (locals.verify) { %>
+      <p style="color: red; margin-left: 0px; margin-bottom: 20px;"><%= verify %></p>
+  <% } %>
+  <% if (locals.pass) { %>
+    <p style="color: rgb(60, 226, 60); margin-left: 30px; margin-bottom: 20px;"><%= pass %></p>
+<% } %>
+  <% if (locals.verify) { %>
+    <button style="background-color: #3498db;
+                   color: white;
+                   padding: 3px 20px;
+                   margin-bottom: 15px;
+                   border: none;
+                   border-radius: 5px;
+                   cursor: pointer;
+                   margin-left: 110px;">
+       <a href="/verify"><%= "Verify Account" %></a>
+    </button>
+<% } %>
+      <form action="" method="post">
+        <input type="text" placeholder="Enter your email" name="email" required>
+        <input type="password" placeholder="Enter your password" name="password" required>
+  
+        <a href="/forgetOtp">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <a href="/">Signup</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

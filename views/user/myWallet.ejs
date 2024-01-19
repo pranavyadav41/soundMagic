@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/Sstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <style>
+              .cart-count {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cart-count span {
+        background-color: #abb56a; /* Set your desired background color */
+        color: #ffffff; /* Set your desired text color */
+        border-radius: 50%;
+        padding:5px 5px;
+        font-size: 14px; /* Set your default font size */
+        position: absolute;
+        top: -6px; /* Adjust vertical position */
+        right: -12px; /* Adjust horizontal position */
+        min-width: 20px; /* Set a minimum width */
+        text-align: center;
+    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .wallet-container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            margin-left: 450px;
+            flex-direction: column;
+        }
+
+        .wallet-header {
+            background-color: #a2a5a2;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .wallet-balance {
+            font-size: 28px;
+            margin: 20px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .wallet-history {
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .transaction-item:hover {
+            transform: scale(1.02);
+        }
+
+        .transaction-type {
+            font-weight: bold;
+            color: #3498db;
+            margin-right: 10px;
+        }
+
+        .amount {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .wallet-container {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo p-0 mt-4">
+                        <a href="./index.html"><img src="../assets/images/logos/download.png" width="180" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li class="active"><a href="/shop">Shop</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <a href="/wishlist"><img src="img/icon/heart.png" alt=""></a>
+                        <% if(cart==null){ %>
+                            <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span></span></a>
+                            <% }else{ %>
+                                <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span><%= cart.items.length %></span></a>
+    
+                                <% } %>
+                        <a href="/user-profile"><img src="img/icon/user.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+        <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>MY WALLET</h4>
+                        <div class="breadcrumb__links">
+                            <a href="/home">Home</a>
+                            <span>Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <% if(wallet[0]){ %>
+
+
+    <div class="wallet-container">
+        <div class="wallet-header">
+            My Wallet
+        </div>
+      
+      
+        <div class="wallet-balance">
+            Balance: &#8377;<%= wallet[0].balance %>
+        </div>
+        <div class="wallet-history">
+            <% wallet[0].history.forEach((data)=>{ %>
+           
+            <div class="transaction-item">
+                <% if(data.type=="Credit"){ %>
+                <span class="transaction-type" style="color: green;"><%= data.type %></span>
+                <span class="amount" style="color: green;">+ &#8377;<%= data.amount %></span>
+                <span class="date" style="color: green;"><%= data.date.toLocaleDateString() %></span>
+                <% }else if(data.type=="Debit"){ %>
+
+                    <span class="transaction-type" style="color:red;"><%= data.type %></span>
+                    <span class="amount" style="color: red;">-  &#8377;<%= data.amount %></span>
+                    <span class="date" style="color:red;"><%= data.date.toLocaleDateString() %></span>
+
+                    <% } %>
+            </div>
+            <% }); %>
+           
+        </div>
+     
+
+            
+
+           
+    </div>
+    <% }else{ %>
+
+        <div class="wallet-container">
+            <div class="wallet-header">
+                My Wallet
+            </div>
+          
+          
+            <div class="wallet-balance">
+                Balance: &#8377;0
+            </div>
+         
+    
+                
+    
+               
+        </div>
+
+
+        <% } %>
+   
+
+
+    
+        <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="/assets/images/logos/download.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <a href="#"><img src="img/payment.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>SHOP NOw</h6>
+                        <ul>
+                            <li><a href="#">Speakers</a></li>
+                            <li><a href="#">Soundbars</a></li>
+                            <li><a href="#">wired headphones</a></li>
+                            <li><a href="#">Wireless headphones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>CONTACT US</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Payment Methods</a></li>
+                            <li><a href="#">Delivary</a></li>
+                            <li><a href="#">Return & Exchanges</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>NewLetter</h6>
+                        <div class="footer__newslatter">
+                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your email">
+                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+       <!-- Js Plugins -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyUEl7A3e6pk6EFD1/Q8dEN5O7Sc6JXAvm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

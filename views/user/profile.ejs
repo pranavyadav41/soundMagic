@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Male-Fashion | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/Sstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <style>
+ 
+    #referral-code {
+      font-size: 15px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+ 
+    #copy-button:hover {
+      background-color: #45a049;
+    }
+        .card {
+          margin: 20px;
+        }
+        .address-section {
+          background-color: rgb(243, 242, 238);
+          padding: 10px;
+          margin-top: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .order-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-image {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #888;
+        }
+
+        .order-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .view-order-btn,
+        .cancel-btn {
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cart-count {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cart-count span {
+        background-color: #abb56a; /* Set your desired background color */
+        color: #ffffff; /* Set your desired text color */
+        border-radius: 50%;
+        padding:5px 5px;
+        font-size: 14px; /* Set your default font size */
+        position: absolute;
+        top: -6px; /* Adjust vertical position */
+        right: -12px; /* Adjust horizontal position */
+        min-width: 20px; /* Set a minimum width */
+        text-align: center;
+    }
+      </style>
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__option">
+            <div class="offcanvas__links">
+                <a href="#">Sign in</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="offcanvas__top__hover">
+                <span>Usd <i class="arrow_carrot-down"></i></span>
+                <ul>
+                    <li>USD</li>
+                    <li>EUR</li>
+                    <li>USD</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas__nav__option">
+            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+            <a href="#"><img src="img/icon/heart.png" alt=""></a>
+            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <div class="price">$0.00</div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__text">
+            <p>Free shipping, 30-day return or refund guarantee.</p>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo p-0 mt-4">
+                        <a href="./index.html"><img src="../assets/images/logos/download.png" width="180" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="/home">Home</a></li>
+                            <li class="active"><a href="/shop">Shop</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__nav__option">
+                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <a href="/wishlist"><img src="img/icon/heart.png" alt=""></a>
+                        <% if(cart==null){ %>
+                            <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span></span></a>
+                            <% }else{ %>
+                                <a href="/cart" class="cart-count"><img src="img/icon/cart.png" alt=""><span><%= cart.items.length %></span></a>
+    
+                                <% } %>
+                        <a href="/user-profile"><img src="img/icon/user.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+        <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__text">
+                        <h4>MY ACCOUNT</h4>
+                        <div class="breadcrumb__links">
+                            <a href="/home">Home</a>
+                            <span>Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <div class="container light-style flex-grow-1 container-p-y">
+        <div class="d-flex justify-content-end mr-5">
+            <button class="btn btn-dark"><a href="/myOrders" style="color: #fff;  text-decoration:none;">MY ORDERS</a></button>
+            <button class="btn btn-dark ml-2"><a   href="/myWallet"    style="color: #fff;  text-decoration:none;">MY WALLET</a></button>
+            </div>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">Account details</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Add address</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Manage Addresses</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label"><b>Firstname</b></label>
+                                    <input type="text" class="form-control mb-1" value="<%= user.firstname %>">
+                                    <label class="form-label"><b>Lastname</b></label>
+                                    <input type="text" class="form-control mb-1" value="<%= user.lastname %>">
+                                </div>
+                                <div class="form-group">
+                                   
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label"><b>Email</b></label>
+                                    <input type="text" class="form-control mb-1" value="<%= user.email %>">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label"><b>Mobile</b></label>
+                                    <input type="text" class="form-control" value="<%= user.mobile %>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div method="POST">
+                                    <div class="form-group">
+                                        <label class="form-label"><b>Current password</b></label>
+                                        <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+                                        <span id="currentPasswordError" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"><b>New password</b></label>
+                                        <input type="password" class="form-control" id="newPassword" name="newPassword">
+                                        <div id="passwordError" class="error-message" style="color: red;"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label"><b>Repeat new password</b></label>
+                                        <input type="password" class="form-control" id ="repeatNewPassword" name="repeatNewPassword">
+                                    </div>
+                                    <p id="passwordMatchError" class="error-message" style="color: red; display: none;">Passwords do not match.</p>
+                                    <button  class="btn btn-success btn-sm" onclick="changePassword()">Save changes</button>&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div action="" method="POST">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Name</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your name" id="fullname" name="fullname" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Mobile</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your mobile number" id="mob" name="mob" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Address(Area and Street)</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your address" id="address" name="housename" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>City/District/Town</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your city" id="city" name="city" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>State</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your state" id="state" name="state" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label"><b>Pincode</b></label>
+                                        <input type="text" class="form-control" placeholder="Enter your Pincode" id="pincode" name="pincode" required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-sm" onclick="addAddress()">Add adress+</button>&nbsp;
+                            </div>
+                        </div>
+                           
+                            <hr class="border-light m-0">
+                        </div>
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-body pb-2">
+                                        <% if (address.length == 0) { %>
+                                            <p><b>Address not found!</b></p>
+                                            <button type="button" class="btn btn-success btn-sm">Add address</button>
+                                        <% } else { %>
+                                            <h4>Manage Address</h4>
+                                            <% address.forEach((address) => { %>
+                                                <div class="address-section">
+                                                    <div class="name-and-address d-flex">
+                                                        <p><%= address.fullname %> <span> , </span></p>
+                                                        <p><%= address.mobile %> </p>
+                                                    </div>
+                                                    <p><%= address.address %> </p>
+                                                    <div class="city-and-state-and-pincode d-flex">
+                                                        <p><%= address.city %> <span> , </span></p>
+                                                        <p><%= address.State %><span> , </span></p>
+                                                        <p><%= address.pincode %></p>
+                                                    </div>
+                                                    <button type="button" class="btn btn-success btn-sm"><a href="/editAddress/<%= address._id %>" style="color: white;">Edit</a></button>
+                                                    <button type="button" class="btn btn-danger btn-sm" data-address-id="<%= address._id %>" onclick="deleteAddress()">Delete</button>
+                                                </div>
+                                            <% }); %>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="account-connections">
+                            <div class="order-container">
+                                <div class="order-item">
+                                    <img class="product-image" src="product1.jpg" alt="Product Image">
+                                    <div class="product-details">
+                                        <div class="product-name">Product Name 1</div>
+                                        <div class="product-price">$19.99</div>
+                                    </div>
+                                    <div class="">
+                                        <button class="btn-success btn-sm">View Order</button>
+                                        <button class="btn-danger btn-sm">Cancel</button>
+                                    </div>
+                                </div>
+                        
+                                <!-- Add more order items as needed -->
+                        
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-notifications">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Activity</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Email me when someone comments on my article</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Email me when someone answers on my forum
+                                            thread</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Email me when someone follows me</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <h6 class="mb-4">Application</h6>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">News and announcements</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input">
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Weekly product updates</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="switcher">
+                                        <input type="checkbox" class="switcher-input" checked>
+                                        <span class="switcher-indicator">
+                                            <span class="switcher-yes"></span>
+                                            <span class="switcher-no"></span>
+                                        </span>
+                                        <span class="switcher-label">Weekly blog digest</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="container12 d-flex ml-5">
+        <div id="referral-code" style="display:none;">http://localhost:3000/?referralCode=<%= user.referral %></div>
+        <button class="btn btn-success mb-4" onclick="copyReferralCode()" style="margin-left: 180px;">COPY REFERRAL CODE</button>
+      </div>
+  <!-- Footer Section Begin -->
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="#"><img src="/assets/images/logos/download.png" alt=""></a>
+                    </div>
+                    <p>The customer is at the heart of our unique business model, which includes design.</p>
+                    <a href="#"><img src="img/payment.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>SHOP NOw</h6>
+                    <ul>
+                        <li><a href="#">Speakers</a></li>
+                        <li><a href="#">Soundbars</a></li>
+                        <li><a href="#">wired headphones</a></li>
+                        <li><a href="#">Wireless headphones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>CONTACT US</h6>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Delivary</a></li>
+                        <li><a href="#">Return & Exchanges</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                    <h6>NewLetter</h6>
+                    <div class="footer__newslatter">
+                        <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                        <form action="#">
+                            <input type="text" placeholder="Your email">
+                            <button type="submit"><span class="icon_mail_alt"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+</footer>
+<!-- Footer Section End -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+       <!-- Js Plugins -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyUEl7A3e6pk6EFD1/Q8dEN5O7Sc6JXAvm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+       <script src="copy-referral-code.js"></script>
+
+       <script>
+        function copyReferralCode() {
+  const codeElement = document.getElementById('referral-code');
+  const textArea = document.createElement('textarea');
+  textArea.value = codeElement.textContent;
+
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+
+  // Display a notification
+  const notification = document.createElement('div');
+  notification.innerHTML = 'Referral code copied to clipboard!';
+  notification.style.position = 'fixed';
+  notification.style.top = '20px';
+  notification.style.left = '50%';
+  notification.style.transform = 'translateX(-50%)';
+  notification.style.padding = '10px';
+  notification.style.backgroundColor = '#4caf50';
+  notification.style.color = '#fff';
+  notification.style.borderRadius = '4px';
+  notification.style.zIndex = '9999';
+  document.body.appendChild(notification);
+
+  // Remove the notification after 2 seconds
+  setTimeout(() => {
+    document.body.removeChild(notification);
+  }, 2000);
+}
+       </script>
+       
+       
+       <script>
+           function showProfileSection(sectionId) {
+               // Hide all sections
+               document.querySelectorAll('.profile-section').forEach(function (section) {
+                   section.style.display = 'none';
+               });
+       
+               // Show the selected section
+               document.getElementById(sectionId).style.display = 'block';
+           }
+       
+       /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       
+           function changePassword(){
+           ///////////Check password regex////////////////////////////////
+           var passwordRegex = /^.{6,}$/;
+           var newPassword = document.getElementById('newPassword').value;
+           if (!passwordRegex.test(newPassword)) {
+               document.getElementById('passwordError').innerHTML = 'Password must contain 6 characters';
+               document.getElementById('passwordError').style.display = 'block';
+               return false;
+           } else {
+               document.getElementById('passwordError').style.display = 'none';
+           }
+           /////////////////Check Password is matching//////////////////////////
+           var confirmNewPassword = document.getElementById('repeatNewPassword').value;
+       
+           if (newPassword !== confirmNewPassword) {
+               document.getElementById('passwordMatchError').style.display = 'block';
+               return false;
+           } else {
+               document.getElementById('passwordMatchError').style.display = 'none';
+           }
+           ////////////////////////////////////////////////////////////////////////
+               const data = {
+                   currentPassword:document.getElementById('currentPassword').value,
+                   newPassword:document.getElementById('newPassword').value,
+                   confirmNewPassword : document.getElementById('repeatNewPassword').value
+       
+               }
+          
+           fetch('/changePassword',{
+               method:'POST',
+               headers:{'Content-Type':'application/json'},
+               body:JSON.stringify(data)
+           })
+           .then(response => {
+               if(!response.ok){
+                   response.json().then(data=>{
+                       if(data.error==='Current password does not match'){
+                           Swal.fire({
+                           icon: 'error',
+                           title: 'Current password does not match',
+                           showConfirmButton: false,
+                           timer: 1500,
+               });
+                       }
+                   })
+               }
+               
+               
+               return response.json()}) // Assuming the response is in JSON format
+         .then(data => {
+          if(data.success){
+           Swal.fire({
+                 icon: 'success',
+                 title: 'Password changed successfully',
+                 showConfirmButton: false,
+                 timer: 1500,
+               });
+          }
+         })
+         .catch(error => {
+           // Handle errors
+           console.error('Error:', error);
+         });
+           
+       }
+       ////////////////////////ADD ADDRESS////////////////////////////////////////////////////////////////////////////////////////////////////
+       
+         function addAddress(){
+       
+          const address ={
+           Fullname:document.getElementById('fullname').value.trim(),
+           Mobile:document.getElementById('mob').value.trim(),
+           Address:document.getElementById('address').value.trim(),
+           city:document.getElementById('city').value.trim(),
+           state:document.getElementById('state').value.trim(),
+           Pincode:document.getElementById('pincode').value.trim()
+       }
+       
+           if(address.Fullname===''|| address.Mobile===''|| address.Address===''||address.city===''||address.state===''||address.Pincode===''){
+               alert("Please fill in all fields")
+               return false;
+           }
+           const nameRegex = /^[A-Za-z ]+$/;
+           const mobileRegex = /^[0-9]{10}$/;
+           const cityRegex = /^[A-Za-z ]+$/;
+           const stateRegex = /^[A-Za-z ]+$/;
+           const pincodeRegex = /^[0-9]{6}$/;
+       
+           if(!address.Fullname.match(nameRegex)){
+               alert("Name Should only contain letters")
+               return false;
+           } 
+           if(!address.Mobile.match(mobileRegex)){
+               alert("Mobile number should contain 10 digits")
+               return false;
+           } 
+           if(!address.city.match(cityRegex)){
+               alert("Enter a valid city")
+               return false;
+           } 
+           if(!address.state.match(stateRegex)){
+               alert("Enter a valid city")
+               return false;
+           } 
+           if(!address.Pincode.match(pincodeRegex)){
+               alert("Pincode should contain 6 digits")
+               return false;
+       
+       
+          
+         }
+         fetch('/addAddress',{
+           method:'POST',
+           headers:{'Content-Type':'application/json'},
+           body:JSON.stringify(address)
+       
+         })
+         .then(response => response.json()) // Assuming the response is in JSON format
+         .then(data => {
+          if(data.success){
+             window.location.href = "/user-profile"
+          }
+         })
+         .catch(error => {
+           // Handle errors
+           console.error('Error:', error);
+         });
+       }
+       ///////////////////////////////////DELETE ADDRESS///////////////////////////////////////////////////
+       
+       function deleteAddress(){
+           const addressId = event.target.getAttribute('data-address-id')
+           fetch('/deleteAddress',{
+               method:'POST',
+               headers:{'Content-Type':'application/json'},
+               body:JSON.stringify({addressId:addressId})
+            }) .then(response => response.json()) // Assuming the response is in JSON format
+            .then(data => {
+            if(data.success){
+                window.location.href = "/user-profile"
+            }
+         })
+         .catch(error => {
+           // Handle errors
+           console.error('Error:', error);
+         });
+       }
+       
+       </script>
+           <script src="js/jquery-3.3.1.min.js"></script>
+           <script src="js/bootstrap.min.js"></script>
+           <script src="js/jquery.nice-select.min.js"></script>
+           <script src="js/jquery.nicescroll.min.js"></script>
+           <script src="js/jquery.magnific-popup.min.js"></script>
+           <script src="js/jquery.countdown.min.js"></script>
+           <script src="js/jquery.slicknav.js"></script>
+           <script src="js/mixitup.min.js"></script>
+           <script src="js/owl.carousel.min.js"></script>
+           <script src="js/main.js"></script>
+           <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+           <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+           <script type="text/javascript">
+       
+           </script>
+       </body>
+       
+       </html>
