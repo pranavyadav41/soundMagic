@@ -38,6 +38,9 @@
         .card {
           margin: 20px;
         }
+        /* .action-buttons button{
+          border: none;
+        } */
   </style>
  
  
@@ -258,11 +261,20 @@
                 <td><%= product.category.name %></td>
                 <td>
                   <div class="action-buttons">
-                    <form action="products/edit/<%= product._id %>" method="GET">
-                    <button class="action-button">Edit</button>
-                    </form>
-                    <button class="unlist-button" data-product-id ="<%= product._id %>" data-state="<%= product.is_listed ? 'true' : 'false' %>" ><%= product.is_listed ? 'Unlist' : 'List' %></button>
-                    <button  class="btn btn-dark" onclick="applyOffer('<%= product._id %>')"  data-toggle="modal" data-target="#exampleModalCenter" >Apply Offer</button>
+                    <a href="products/edit/<%= product._id %>">
+                    <button class="action-button">
+                        Edit</button>
+                      </a>
+                    <!-- <form action="products/edit/<%= product._id %>" method="GET">
+                    </form> -->
+                    <span >
+
+                      <button class="unlist-button" data-product-id ="<%= product._id %>" data-state="<%= product.is_listed ? 'true' : 'false' %>" ><%= product.is_listed ? 'Unlist' : 'List' %></button>
+                    </span>
+                    <span>
+
+                      <button  class="btn btn-dark" onclick="applyOffer('<%= product._id %>')"  data-toggle="modal" data-target="#exampleModalCenter" >Apply Offer</button>
+                    </span>
                   </div>
                 </td>
               </tr>
