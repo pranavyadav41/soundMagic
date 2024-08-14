@@ -272,9 +272,13 @@ const userLogin = async (req, res) => {
   const password = req.body.password;
   try {
     const user = await User.findOne({ email });
-    req.session.userid = user._id;
+    console.log("user found",user)
+    if(user){
+      req.session.userid = user._id;
+    }
     //email match
     if (!user) {
+      console.log("error login")
       res.render("userLogin", { error: "Invalid Email or Password" });
     }
 
@@ -297,8 +301,10 @@ const userLogin = async (req, res) => {
     //compare password
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (passwordMatch) {
+      console.log("password matched")
       res.redirect("/home");
     } else {
+      console.log("invalid email or password")
       res.render("userLogin", { error: "Invalid Email or Password" });
     }
   } catch (error) {}
@@ -1366,7 +1372,9 @@ const returnOrder = async (req, res) => {
 
 const loadWishlist = async (req, res) => {
   try {
-    const wishlist = await Wishlist.findOne({userId:req.session.userid}).populate({
+    const wishlist = await Wishlist.findOne({
+      userId: req.session.userid,
+    }).populate({
       path: "products.productId",
     });
     const cart = await Cart.findOne({ userId: req.session.userid });
@@ -1510,11 +1518,9 @@ const downloadInvoice = async (req, res) => {
     pdfDoc.fontSize(12).text("Products:", { align: "left" });
     pdfDoc.moveDown();
 
-    pdfDoc
-      .fontSize(10)
-      .text(`${product.productName} - Quantity: ${quantity}`, {
-        align: "left",
-      });
+    pdfDoc.fontSize(10).text(`${product.productName} - Quantity: ${quantity}`, {
+      align: "left",
+    });
 
     if (
       product.productOffer.offerApplied ||
